@@ -1,0 +1,31 @@
+body{
+  	background:gray;
+}
+h1{
+	color:white;
+	text-align:center;
+}
+section{
+    text-align: center;
+    border-radius: 10px;
+	font:20pt Arial;
+   	background:cornflowerblue;
+    margin:auto;
+    margin-top:10px;
+    width:auto;
+    height:auto;
+    padding-bottom:50px;
+    padding-top: 10px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.363);
+}
+
+input{
+    font-size:150px;
+    width:150px;
+    height:150px;
+    text-align: center;
+    background-color: cornsilk;
+    margin: auto;
+     
+    
+}
