@@ -6,11 +6,12 @@ function exibir(){
     sec.innerText = ''
     for(let cont = 0; cont < 9; cont++){
         let eletd = document.createElement('input')
+        eletd.setAttribute('type', 'button')
         eletd.setAttribute('id',`${cont}`)
         
 
         function escolher() {
-            if(eletd.value.length < 1 && jogo[9] != 'win'){
+            if(eletd.value == `${op} 1` && jogo[9] != 'win'){
                 eletd.value = op
                 jogo[eletd.id] = op
                 op == 'X' ? op = 'O': op = 'X';
@@ -74,16 +75,22 @@ function exibir(){
         }
 
         function enter() {
-            eletd.placeholder = op
-        }
+            if(eletd.value.length < 1){
+                eletd.value = `${op} 1`
+            }
 
+        }
         function out() {
-            eletd.removeAttribute('placeholder');   
+            if( eletd.value == `${op} 1`){
+                eletd.value = null;   
+            }
+            
         }
         
+        
         eletd.onclick = escolher
-        eletd.onmouseenter = enter
         eletd.onmouseout = out
+        eletd.onmouseenter = enter
         sec.appendChild(eletd)
         if (cont == 2 || cont == 5 || cont == 8){
             let b = document.createElement('br')
